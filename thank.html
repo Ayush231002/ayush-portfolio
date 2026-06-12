@@ -3,111 +3,74 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Thank You | Ayush Babu</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
+<title>Message Sent | Ayush Babu</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  background: radial-gradient(circle at top, #0f172a, #020617);
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+:root{
+  --bg:#08090C;--surface:#0E1117;--line:rgba(255,255,255,0.07);--line2:rgba(255,255,255,0.12);
+  --text:#F2F3F6;--text2:#9BA1AE;--text3:#62687A;
+  --accent:#E8A33D;--green:#3DD68C;
+  --ease:cubic-bezier(0.22,1,0.36,1);
 }
-
-.container {
-  max-width: 600px;
-  padding: 50px 40px;
-  border-radius: 24px;
-  background: linear-gradient(145deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
-  backdrop-filter: blur(20px);
-  box-shadow: 0 0 80px rgba(251,191,36,0.15);
-  text-align: center;
-  animation: fadeIn 0.8s ease;
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  min-height:100svh;display:flex;align-items:center;justify-content:center;
+  background:var(--bg);color:var(--text);
+  font-family:'Inter',system-ui,sans-serif;padding:20px;
+  -webkit-font-smoothing:antialiased;
+  background-image:radial-gradient(640px 380px at 50% 0%,rgba(232,163,61,0.06),transparent 65%);
 }
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+.card{
+  width:min(480px,94vw);
+  background:var(--surface);border:1px solid var(--line);border-radius:16px;
+  padding:48px 44px;text-align:center;
+  box-shadow:0 1px 2px rgba(0,0,0,.35),0 12px 32px rgba(0,0,0,.35);
+  animation:rise .55s var(--ease) both;
 }
-
-h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1}}
+.status{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:6px 15px;border-radius:100px;margin-bottom:26px;
+  background:rgba(61,214,140,0.1);border:1px solid rgba(61,214,140,0.22);
+  font-size:.74rem;font-weight:600;color:var(--green);
 }
-
-.highlight {
-  color: #fbbf24;
+.status i{width:6px;height:6px;border-radius:50%;background:var(--green)}
+h1{font-size:1.7rem;font-weight:650;letter-spacing:-0.025em;margin-bottom:12px}
+h1 em{font-style:normal;color:var(--accent)}
+p{color:var(--text2);font-size:.92rem;line-height:1.75;max-width:340px;margin:0 auto}
+p b{color:var(--text);font-weight:600}
+.back{
+  display:inline-flex;align-items:center;gap:8px;margin-top:30px;
+  padding:13px 28px;border-radius:10px;text-decoration:none;
+  background:var(--accent);color:#0F0A02;
+  font-weight:600;font-size:.86rem;
+  transition:all .22s var(--ease);
+  box-shadow:0 1px 2px rgba(0,0,0,.35);
 }
-
-p {
-  color: #cbd5f5;
-  line-height: 1.7;
-  margin-bottom: 20px;
+.back:hover{background:#F0B254;transform:translateY(-1px);box-shadow:0 1px 2px rgba(0,0,0,.35),0 12px 32px rgba(0,0,0,.35)}
+.links{margin-top:26px;padding-top:24px;border-top:1px solid var(--line);display:flex;justify-content:center;gap:8px}
+.links a{
+  padding:7px 15px;border-radius:8px;border:1px solid var(--line);
+  font-size:.76rem;font-weight:500;color:var(--text2);text-decoration:none;
+  transition:all .2s;
 }
-
-.btn {
-  display: inline-block;
-  padding: 12px 28px;
-  border-radius: 999px;
-  text-decoration: none;
-  margin-top: 20px;
-  background: linear-gradient(135deg, #f59e0b, #fbbf24);
-  color: #000;
-  font-weight: 600;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(251,191,36,0.4);
-}
-
-.links {
-  margin-top: 20px;
-  font-size: 0.9rem;
-}
-
-.links a {
-  color: #94a3b8;
-  margin: 0 10px;
-  text-decoration: none;
-}
-
-.links a:hover {
-  color: #fff;
-}
+.links a:hover{color:var(--text);border-color:var(--line2);background:rgba(255,255,255,0.03)}
 </style>
 </head>
-
 <body>
-
-<div class="container">
-
-  <h1>🚀 Thank You, <span class="highlight">You're Noticed!</span></h1>
-
-  <p>
-    Your message has been successfully received.  
-    I’ll get back to you within <span class="highlight">24 hours</span>.
-  </p>
-
-  <p>
-    Meanwhile, feel free to explore my projects and see how I deliver 
-    <span class="highlight">data-driven insights</span>.
-  </p>
-
-  <a href="index.html" class="btn">← Back to Portfolio</a>
-
+<div class="card">
+  <div class="status"><i></i>Message received</div>
+  <h1>Thank you<em>.</em></h1>
+  <p>Your message is in my inbox. Expect a response within <b>24 hours</b>.</p>
+  <a class="back" href="index.html">← Back to portfolio</a>
   <div class="links">
-    <a href="https://www.linkedin.com/in/ayushbabu">LinkedIn</a>
-    <a href="https://github.com/ayushbabu">GitHub</a>
+    <a href="https://www.linkedin.com/in/ayushjaiswal2310/" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://github.com/Ayush231002" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://billing.elvoraglobal.in/" target="_blank" rel="noopener">Live SaaS</a>
   </div>
-
 </div>
-
 </body>
 </html>
