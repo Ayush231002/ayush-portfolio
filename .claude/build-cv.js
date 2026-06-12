@@ -1,4 +1,4 @@
-/* Builds AyushBabu_CV.docx from portfolio content.
+/* Builds AyushJaiswal_CV.docx from portfolio content.
    Run: node .claude/build-cv.js  (from repo root) */
 const fs = require('fs');
 const path = require('path');
@@ -78,7 +78,7 @@ const doc = new Document({
       /* ───── HEADER ───── */
       new Paragraph({
         spacing: { after: 40 },
-        children: [t('AYUSH BABU', { bold: true, size: 42, characterSpacing: 20 })],
+        children: [t('AYUSH Jaiswal', { bold: true, size: 42, characterSpacing: 20 })],
       }),
       new Paragraph({
         spacing: { after: 90 },
@@ -88,7 +88,7 @@ const doc = new Document({
         spacing: { after: 40 },
         children: [
           t('Kanpur, India (open to relocate)   |   ', { size: 19, color: GRAY }),
-          link('ayushbabu121004@gmail.com', 'mailto:ayushbabu121004@gmail.com', { size: 19 }),
+          link('ayushJaiswal121004@gmail.com', 'mailto:ayushJaiswal121004@gmail.com', { size: 19 }),
           t('   |   ', { size: 19, color: GRAY }),
           link('linkedin.com/in/ayushjaiswal2310', 'https://www.linkedin.com/in/ayushjaiswal2310/', { size: 19 }),
         ],
@@ -187,6 +187,6 @@ const doc = new Document({
 });
 
 Packer.toBuffer(doc).then(buf => {
-  fs.writeFileSync(path.join(__dirname, '..', 'AyushBabu_CV.docx'), buf);
-  console.log('OK: AyushBabu_CV.docx written');
+  fs.writeFileSync(path.join(__dirname, '..', 'AyushJaiswal_CV.docx'), buf);
+  console.log('OK: AyushJaiswal_CV.docx written');
 });

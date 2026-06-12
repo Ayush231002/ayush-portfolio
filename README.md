@@ -1,4 +1,4 @@
-# Ayush Babu — Portfolio v5 (Corporate Premium)
+# Ayush Jaiswal — Portfolio v5 (Corporate Premium)
 
 Clean, recruiter-friendly portfolio in the Stripe / Linear / Vercel design language —
 flat dark surfaces, hairline borders, a single amber accent, Inter typography, and a
@@ -19,7 +19,7 @@ js/
   data.js           — ALL content: projects, tools, certificates  ← edit copy here
   case-study.js     — renders a project object into the case-study panel
   main.js           — loader, nav, reveals, counters, filters, renderers
-AyushBabu_Resume.pdf
+AyushJaiswal_Resume.pdf
 ```
 
 ## Sections
